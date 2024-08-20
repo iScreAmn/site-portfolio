@@ -227,7 +227,7 @@ img {
     width: 100%;
 }
 
-.home-info-link {
+.inner-info-link {
     background: var(--second-color);
     color: #fff;
     font-size: var(--normal-font-size);
@@ -235,11 +235,11 @@ img {
     display: inline-block;
     margin-top: 25px;
     padding: 20px 30px;
-    letter-spacing: 1;
-    border-radius: 10;
+    letter-spacing: 1px;
+    border-radius: 10px;
 }
 
-.home-info-link:hover {
+.inner-info-link:hover {
     background: var(--hover-color);
 }
 
@@ -270,4 +270,134 @@ img {
     30% {
         transform: translateY(10px);
     }
+}
+
+/* Styles for All Sections */
+
+.section {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 0 20px;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-title{
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(to top, transparent 0%, var(--first-color) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .1;
+}
+
+.inner-subtitle {
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+    transform: translateY(-55px);
+}
+
+.inner-subtitle::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    right: 0;
+    bottom: 0;
+    background: var(--second-color);
+}
+
+/* ABOUT SECTION */
+
+.about {
+
+}
+
+.about__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-img {
+    max-width: 500px;
+    width: 100%;
+}
+
+.about-img img {
+    border-radius: 10px;
+}
+
+.about-info {
+    max-width: 600px;
+    width: 100%;
+}
+
+.description h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.description h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.description h4 span {
+    color: var(--second-color);
+}
+
+.description p {
+    color: var(--third-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--liner-color);
+}
+
+.professional-list {
+    display: flex;
+    column-gap: 30px;
+}
+
+.professional-list .list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.list-item .number {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.list-item .text {
+    color: var(--third-color);
+    font-size: var(--small-font-size);
+}
+
+.number {
+}
+
+.text {
+}
+
+.inner-info-link {
+}
+
+.fa-solid {
+}
+
+.fa-download {
 }
