@@ -758,6 +758,7 @@ img {
 
 .portfolio-modal {
     position: fixed;
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -768,14 +769,19 @@ img {
     padding: 20px;
     background: var(--bg-transparent-color-01);
     backdrop-filter: blur(20px);
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
     transition: .3s linear;
 }
 
 .portfolio-modal.active {
+    visibility: visible;
     opacity: 1;
     z-index: 11;
+}
+
+.portfolio-modal.active .portfolio-modal-body {
+    transform: translateY(0);
 }
 
 .portfolio-modal-body {
