@@ -418,9 +418,6 @@ img {
     margin-bottom: 20px;
 }
 
-.education-all {
-
-}
 .education {
     min-width: 320px;
     width: 32%;
@@ -439,7 +436,8 @@ img {
     padding: 20px;
     margin-top: 15px;
     border-radius: 6px;
-    background: var(--card-bg-color);transition: .3s linear;
+    background: var(--card-bg-color);
+    transition: .3s linear;
     box-shadow: var(--box-shadow);
     border-bottom: 3px solid var(--second-color);
 
@@ -596,12 +594,35 @@ img {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    transition: .3s linear;
 }
+
+.service-card:hover {
+    /* transform: scale(1.03); */
+    transform: scale(1.03);
+    /* cursor: pointer; */
+}
+
+.service-card:hover .fa-right-long {
+    transform: translateX(5px);
+    transition: transform 0.3s linear;
+  }
+
+  /* ZAMENIT */
+  .expirience-card:hover,
+  .education-list .item:hover,
+  .bar:hover {
+      transform: scale(1.03);
+      cursor: pointer;
+  }
+
+
 
 .service-card>i {
     color: var(--second-color);
     font-size: 48px;
     margin-bottom: 20px;
+
 }
 
 .service-card h3 {
@@ -614,16 +635,15 @@ img {
 .learn-more-btn {
     cursor: pointer;
     color: var(--third-color);
-    
 }
 
-.learn-more-btn i {
+/* .learn-more-btn i {
     transition: .3s linear;
-}
+} */
 
-.learn-more-btn i:hover {
+/* .learn-more-btn i:hover {
     transform: translateX(10px);
-}
+} */
 
 .service-modal {
     position: fixed;
