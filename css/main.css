@@ -249,7 +249,7 @@ img {
 
 .scroll-down {
     display: block;
-    margin: 20px auto 0;
+    margin: 100px auto 0;
     width: 120px;
     text-align: center;
     color: var(--first-color);
