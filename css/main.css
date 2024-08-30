@@ -324,6 +324,7 @@ img {
     display: flex;
     align-items: center;
     gap: 40px;
+     overflow-x: hidden; /*  Убирает резкий скачок блоков в AOS  */
 }
 
 .about-img {
@@ -888,8 +889,81 @@ img {
     margin-bottom: 28px;
 }
 
-.inner-info-link {
+
+/* SLIDER */
+
+.our-client-wrapper {
+    width: 100%;
 }
 
-.fa-paper-plane {
+.swiper {
+}
+
+.client-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}
+
+.swiper-client-block {
+}
+
+.client-img {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.client-img img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-details {
+    max-width: 500px;
+    width: 100%;
+}
+
+.client-details p {
+    font-size: 22px;
+    color: var(--third-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--liner-color);
+}
+
+.client-details h3 {
+    color: var(--first-color);
+    font-size: 24px;
+}
+
+.client-details span {
+    color: var(--third-color);
+    font-size: 18px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    font-size: 45px;
+    color: var(--second-color);
+}
+
+
+
+.swiper-pagination {
 }
