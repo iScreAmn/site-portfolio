@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -69,8 +71,10 @@
             <h2 class="inner-title">About me</h2>
             <h3 class="inner-subtitle">About me</h3>
             <div class="about__wrapper">
-                <div class="about-img"><img src="./img/about-img-2.jpg" alt="about"></div>
-                <div class="about-info">
+                <div class="about-img" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                    <img src="./img/about-img-2.jpg" alt="about">
+                </div>
+                <div class="about-info" data-aos="fade-down" data-aos-delay="" data-aos-duration="1000">
                     <div class="description">
                         <h3>I'm Dimitri Jmukhadze</h3>
                         <h4>A lead <span>Front-End Developer</span> based in
@@ -387,7 +391,7 @@
             <h2 class="inner-title">Portfolio</h2>
             <h3 class="inner-subtitle">Portfolio</h3>
             <div class="portfolio__wrapper">
-                <div class="portfolio-img-card">
+                <div class="portfolio-img-card" data-aos="zoom-in">
                     <div class="img-card">
                         <div class="overlay"></div>
                         <div class="inf">
@@ -405,7 +409,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-img-card">
+                <div class="portfolio-img-card" data-aos="zoom-in">
                     <div class="img-card">
                         <div class="overlay"></div>
                         <div class="inf">
@@ -423,7 +427,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-img-card">
+                <div class="portfolio-img-card" data-aos="zoom-in">
                     <div class="img-card">
                         <div class="overlay"></div>
                         <div class="inf">
@@ -441,7 +445,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-img-card">
+                <div class="portfolio-img-card" data-aos="zoom-in">
                     <div class="img-card">
                         <div class="overlay"></div>
                         <div class="inf">
@@ -459,7 +463,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-img-card">
+                <div class="portfolio-img-card" data-aos="zoom-in">
                     <div class="img-card">
                         <div class="overlay"></div>
                         <div class="inf">
@@ -477,7 +481,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-img-card">
+                <div class="portfolio-img-card" data-aos="zoom-in">
                     <div class="img-card">
                         <div class="overlay"></div>
                         <div class="inf">
@@ -498,6 +502,56 @@
             </div>
         </div>
      </section>    
+     <!-- CLIENTS -->
+     <section class="section our-client" id="our-client">
+        <div class="container flex-center">
+            <h2 class="inner-title">Our clients</h2>
+            <h3 class="inner-subtitle">Our clients</h3>
+            <div class="our-client-wrapper">
+                <div class="swiper client-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide swiper-client-block">
+                        <div class="client-img">
+                            <img src="./img/client3.jpg" alt="client">
+                        </div>
+                        <div class="client-details">
+                            <p>Hey i'm Victoria and he was doing me a good favor, good job mate, hope see u soon</p>
+                            <h3>Vika Molets</h3>
+                            <span>Graphic Designer</span>
+                          </div>
+                      </div>
+                      <div class="swiper-slide swiper-client-block">
+                        <div class="client-img">
+                            <img src="./img/client2.jpg" alt="client">
+                        </div>
+                        <div class="client-details">
+                            <p>Hey i'm Martin and he was doing me a good favor, good job mate, hope see u soon</p>
+                            <h3>Martin Davis</h3>
+                            <span>Graphic Designer</span>
+                          </div>
+                      </div>
+                      <div class="swiper-slide swiper-client-block">
+                        <div class="client-img">
+                            <img src="./img/client1.jpg" alt="client">
+                        </div>
+                        <div class="client-details">
+                            <p>Hey i'm Amanda and he was doing me a good favor, good job mate, hope see u soon</p>
+                            <h3>Amanda Hill</h3>
+                            <span>Marketing Manager</span>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+        </div>
+      </section>
      <!-- GET IN TOUCH BLOCK -->
      <div class="get-in-touch sub-section">
         <div class="container flex-center">
@@ -513,8 +567,15 @@
                 </a>
             </div>
         </div>
-     </div>   
+     </div>
    </main>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="./js/swiper-bundle.min.js"></script>
    <script src="./js/scrollreveal.js"></script>
    <script src="./js/main.js"></script>
