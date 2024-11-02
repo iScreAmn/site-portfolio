@@ -10,6 +10,28 @@ window.addEventListener("scroll", function() {
   
 })
 
+// Navigation menu items active
+
+window.addEventListener("scroll", function() {
+  const section = this.document.querySelectorAll("section")
+  const scrollY = this.window.scrollY
+
+  section.forEach(function(current) {
+    let sectionHight = current.offsetHeight
+    let sectionTop = current.offsetTop - 50
+    let sectionId = current.getAttribute("id")
+    let navItem = document.querySelector(`.nav-item a[href*="${sectionId}"]`)
+
+    if(navItem) {
+      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHight) {
+        navItem.classList.add("active") 
+      } else {
+      navItem.classList.remove("active")
+      }
+    }
+  })
+})
+
 // Services section - Modal
 
 const serviceModal = document.querySelectorAll(".service-modal")
