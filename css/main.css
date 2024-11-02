@@ -147,8 +147,12 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: .6s linear;
+    transition: .4s linear;
     padding: 18px 0;
+}
+
+.header.sticky .header__wrapper {
+    padding: 10px 0;
 }
 
 .nav {
