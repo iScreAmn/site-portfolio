@@ -1,3 +1,15 @@
+// Header effect scroll
+
+const header = document.querySelector(".header")
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 1) {
+    header.classList.add("sticky") 
+  } else {
+    header.classList.remove("sticky")
+  }
+  
+})
+
 // Services section - Modal
 
 const serviceModal = document.querySelectorAll(".service-modal")
