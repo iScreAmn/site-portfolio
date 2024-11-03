@@ -32,6 +32,20 @@ window.addEventListener("scroll", function() {
   })
 })
 
+// Scroll to top button
+
+const scrollToTop = document.querySelector(".scrollToTop")
+window.addEventListener("scroll", function() {
+  scrollToTop.classList.toggle("active", this.window.scrollY > 500)
+})
+
+scrollToTop.addEventListener("click", function() {
+  document.body.scrollToTop = 0
+  document.documentElement.scrollTop = 0
+})
+
+
+
 // Services section - Modal
 
 const serviceModal = document.querySelectorAll(".service-modal")
