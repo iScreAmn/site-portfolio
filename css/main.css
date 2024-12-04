@@ -1230,7 +1230,7 @@ main {
     }
 
     .nav.active {
-        z-index: 10;
+        z-index: 3;
         opacity: 1;
         visibility: visible;
     }
@@ -1254,5 +1254,36 @@ main {
 
     .nav-menu li {
         text-align: center;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-group {
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .about-group {
+        text-align: left;
+    }
+
+    .info-group,
+    .follow-group {
+        align-items: flex-start;
+    }
+
+    .info-group ul,
+    .follow-group ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-group a {
+        padding: 10px 0;
     }
 }
