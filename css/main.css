@@ -1227,6 +1227,14 @@ main {
         align-items: center;
     }
 
+    .about__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .professional-list {
+        flex-wrap: wrap;
+    }
 
 }
 
