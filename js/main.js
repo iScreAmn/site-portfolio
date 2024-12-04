@@ -140,7 +140,9 @@ ScrollReveal({
   delay: 100
 })
 
-ScrollReveal().reveal('.home-info h1', {delay: 500, origin: 'left'});
-ScrollReveal().reveal('.home-img', {delay: 600, origin: 'right'});
-ScrollReveal().reveal('.media-icons a', {delay: 700, origin: 'bottom', interval: 200});
+
+ScrollReveal().reveal('.inner-title, .inner-subtitle', {scale: 1.5, delay: 200});
+ScrollReveal().reveal('.home-info h1, .about-img', {delay: 500, origin: 'left'});
+ScrollReveal().reveal('.home-img, .description, .inner-info-link', {delay: 600, origin: 'right'});
+ScrollReveal().reveal('.media-icons a, .list-item', {delay: 700, origin: 'bottom', interval: 200});
 ScrollReveal().reveal('.home-info h3, .home-info p, .home-info-link', {delay: 600, origin: 'left'});
