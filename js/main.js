@@ -134,7 +134,7 @@ navLinks.forEach(function(link) {
 // Scroll Reveal
 
 ScrollReveal({
-  reset: true,
+  reset: false,
   distance: "60px",
   duration: 2500,
   delay: 100
