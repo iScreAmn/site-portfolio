@@ -1198,6 +1198,38 @@ main {
 
 /* Media Query max-width 980px */
 
+@media (max-width: 1070px) {
+
+    .media-icons {
+        order: 3;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .home-img {
+        order: 1;
+    }
+
+    .home-img img {
+        margin: 0 auto;
+    }
+
+    .home-info {
+        order: 2;
+    }
+
+    .home-info h1 {
+        font-size: 45px;
+    }
+
+    .home__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
 @media (max-width: 980px) {
 
     .nav-menu-btn {
