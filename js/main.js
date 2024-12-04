@@ -109,3 +109,24 @@ const swiper = new Swiper(".client-swiper", {
     prevEl: ".swiper-button-prev"
   },
 });
+
+// Responsive navigation menu toggle
+
+const navBtn = document.querySelector(".nav-menu-btn")
+const navBar = document.querySelector(".nav")
+const navMenu = document.querySelector(".nav-menu")
+const navLinks = document.querySelectorAll(".nav-link")
+
+navBtn.addEventListener("click", function() {
+  navBtn.classList.toggle("close")
+  navBar.classList.toggle("active")
+  navMenu.classList.toggle("active")
+})
+
+navLinks.forEach(function(link) {
+  link.addEventListener("click", function() {
+    navBtn.classList.remove("close")
+    navBar.classList.remove("active")
+    navMenu.classList.remove("active")
+  })
+})
