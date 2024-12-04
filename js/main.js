@@ -118,7 +118,7 @@ const navMenu = document.querySelector(".nav-menu")
 const navLinks = document.querySelectorAll(".nav-link")
 
 navBtn.addEventListener("click", function() {
-  navBtn.classList.toggle("close")
+  navBtn.classList.toggle("close") 
   navBar.classList.toggle("active")
   navMenu.classList.toggle("active")
 })
