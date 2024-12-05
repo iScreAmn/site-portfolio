@@ -44,7 +44,60 @@ scrollToTop.addEventListener("click", function() {
   document.documentElement.scrollTop = 0
 })
 
+// Scroll Reveal Enable
+// ScrollReveal().reveal( {scale: 1.5, delay: 200});
 
+const revealConfiguration = [
+  {selector: '.inner-title, .inner-subtitle', config: {opacity: 0, delay: 200}},
+  {selector: '.home-info h1, .about-img', config: {delay: 500, origin: 'left'}},
+  {selector: '.home-img, .description, .inner-info-link', config: {delay: 600, origin: 'right'}},
+  {selector: '.skills-description, .work-exp-title, .services-description', config: {delay: 600, origin: 'top'}},
+  {selector: '.media-icons a, .list-item, .inner-info-link', config: {delay: 700, origin: 'bottom', interval: 200}},
+  {selector: '.education', config: {origin: 'top',delay: 600, interval: 300}},
+  {selector: '.work-exp .experience-card, .services-container', config: {origin: 'top',delay: 600, interval: 300}},
+  {selector: '.home-info h3, .home-info p, .home-info-link', config: {delay: 600, origin: 'left'}},
+]
+
+function initializeScrollReveal() {
+  window.sr = ScrollReveal({
+    reset: false,
+    distance: "60px",
+    duration: 2500,
+    delay: 100
+  })
+  revealConfiguration.forEach(({selector, config}) => {
+    sr.reveal(selector, config)
+  })
+}
+
+initializeScrollReveal()
+
+// Scroll Reveal Disable
+
+function disableScrollReveal() {
+  sr.clean() // Очистка всех элементов от анимации
+  document.documentElement.style.overflowY = "hidden"
+  document.body.style.overflowY = "hidden"
+
+  revealConfiguration.forEach(({selector}) => {
+    document.querySelectorAll(selector).forEach(el => {
+      el.style.transform = ""
+      el.style.opacity = ""
+      el.style.transition = ""
+      el.style.visibility = ""
+    })
+  })
+  console.log("function off")
+}
+
+// Функция повторной инициализации ScrollReveal
+
+function enableScrollReveal() {
+  document.documentElement.style.overflowY = ""
+  document.body.style.overflowY = ""
+  initializeScrollReveal()
+  console.log("function work")
+}
 
 // Services section - Modal
 
@@ -54,6 +107,7 @@ const modalCloseBtn = document.querySelectorAll(".modal-close-btn")
 
 const modal = function(modalClick) {
   serviceModal[modalClick].classList.add("active")
+  disableScrollReveal()
 }
 
 learnMoreBtn.forEach((button, i) => {
@@ -67,8 +121,10 @@ modalCloseBtn.forEach(button => {
     serviceModal.forEach(modal => {
       modal.classList.remove("active")
     })
+    enableScrollReveal()
   })
 })
+
 
 // Portfolio section - Modal
 
@@ -131,18 +187,3 @@ navLinks.forEach(function(link) {
   })
 })
 
-// Scroll Reveal
-
-ScrollReveal({
-  reset: false,
-  distance: "60px",
-  duration: 2500,
-  delay: 100
-})
-
-
-ScrollReveal().reveal('.inner-title, .inner-subtitle', {scale: 1.5, delay: 200});
-ScrollReveal().reveal('.home-info h1, .about-img', {delay: 500, origin: 'left'});
-ScrollReveal().reveal('.home-img, .description, .inner-info-link', {delay: 600, origin: 'right'});
-ScrollReveal().reveal('.media-icons a, .list-item', {delay: 700, origin: 'bottom', interval: 200});
-ScrollReveal().reveal('.home-info h3, .home-info p, .home-info-link', {delay: 600, origin: 'left'});
