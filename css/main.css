@@ -701,12 +701,12 @@ main {
     background: var(--bg-transparent-color);
     visibility: hidden;
     opacity: 0;
-    transition: .3s linear;
 }
 
 .service-modal.active {
     visibility: visible;
     opacity: 1;
+    transition: .3s linear;
 }
 
 .service-modal-body {
@@ -1325,5 +1325,19 @@ main {
 
     .info-group a {
         padding: 10px 0;
+    }
+
+    .education,
+    .work-exp .expirience-card {
+        min-width: 295px;
+        width: 32%;
+    }
+
+    .service-modal-body {
+        padding: 40px 15px 15px;
+    }
+
+    .service-modal-body h1 {
+        font-size: 25px;
     }
 }
