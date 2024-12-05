@@ -54,7 +54,7 @@ const revealConfiguration = [
   {selector: '.skills-description, .work-exp-title, .services-description', config: {delay: 600, origin: 'top'}},
   {selector: '.media-icons a, .list-item, .inner-info-link', config: {delay: 700, origin: 'bottom', interval: 200}},
   {selector: '.education', config: {origin: 'top',delay: 600, interval: 300}},
-  {selector: '.work-exp .experience-card, .services-container', config: {origin: 'top',delay: 600, interval: 300}},
+  {selector: '.work-exp .experience-card, .services-container, .portfolio-img-card', config: {origin: 'top',delay: 600, interval: 300}},
   {selector: '.home-info h3, .home-info p, .home-info-link', config: {delay: 600, origin: 'left'}},
 ]
 
@@ -134,6 +134,7 @@ const portfolioCloseBtn = document.querySelectorAll(".portfolio-close-btn")
 
 const portfolioModal = function(modalClick) {
   portfolioModals[modalClick].classList.add("active")
+  disableScrollReveal()
 }
 
 imgCard.forEach((button, i) => {
@@ -147,6 +148,7 @@ portfolioCloseBtn.forEach(button => {
     portfolioModals.forEach(modalView => {
       modalView.classList.remove("active")
     })
+    enableScrollReveal()
   })
 })
 
