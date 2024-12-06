@@ -832,13 +832,14 @@ main {
     backdrop-filter: blur(20px);
     visibility: hidden;
     opacity: 0;
-    transition: .3s linear;
+    
 }
 
 .portfolio-modal.active {
     visibility: visible;
     opacity: 1;
     z-index: 11;
+    transition: .3s linear;
 }
 
 .portfolio-modal.active .portfolio-modal-body {
@@ -1333,11 +1334,13 @@ main {
         width: 32%;
     }
 
-    .service-modal-body {
+    .service-modal-body,
+    .portfolio-modal-body {
         padding: 40px 15px 15px;
     }
 
-    .service-modal-body h1 {
+    .service-modal-body h3,
+    .portfolio-modal-body h3 {
         font-size: 25px;
     }
 }
