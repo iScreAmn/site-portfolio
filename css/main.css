@@ -891,6 +891,7 @@ main {
 .get-in-touch .contact-card {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     position: relative;
     width: 90%;
     padding: 50px;
@@ -1305,7 +1306,27 @@ main {
     .about-group {
         text-align: center;
     }
+
+    .get-in-touch .contact-card {
+        width: 100%;
+        padding: 25px;
+    }
     
+}
+
+@media (max-width: 768px) {
+
+    .contact-card h2 {
+        font-size: 40px;
+    }
+
+    .contact-card h3 {
+        font-size: 28px;
+    }
+
+    .contact-card h4 {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1342,5 +1363,9 @@ main {
     .service-modal-body h3,
     .portfolio-modal-body h3 {
         font-size: 25px;
+    }
+
+    .contact-card h2 {
+        font-size: 35px;
     }
 }
