@@ -1311,6 +1311,10 @@ main {
         width: 100%;
         padding: 25px;
     }
+
+    .client-swiper .swiper-slide {
+        flex-direction: column;
+    }
     
 }
 
@@ -1327,9 +1331,19 @@ main {
     .contact-card h4 {
         font-size: 18px;
     }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
 }
 
 @media (max-width: 450px) {
+
+    .inner-title {
+        font-size: 50px;
+    }
+
     .about-group {
         text-align: left;
     }
