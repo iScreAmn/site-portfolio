@@ -49,7 +49,7 @@ scrollToTop.addEventListener("click", function() {
 
 const revealConfiguration = [
   {selector: '.inner-title, .inner-subtitle', config: {opacity: 0, delay: 200}},
-  {selector: '.home-info h1, .about-img', config: {delay: 500, origin: 'left'}},
+  {selector: '.home-info h1, .about-img, .contact-card .title', config: {delay: 500, origin: 'left'}},
   {selector: '.home-img, .description, .inner-info-link', config: {delay: 600, origin: 'right'}},
   {selector: '.skills-description, .work-exp-title, .services-description', config: {delay: 600, origin: 'top'}},
   {selector: '.media-icons a, .list-item, .inner-info-link', config: {delay: 700, origin: 'bottom', interval: 200}},
