@@ -1139,8 +1139,9 @@ main {
     justify-content: space-between;
 }
 
-.about-group {
-}
+/* .hr {
+    border: 1px solid var(--liner-color);
+} */
 
 .about-group h2 {
     font-size: 35px;
@@ -1315,6 +1316,11 @@ main {
     .client-swiper .swiper-slide {
         flex-direction: column;
     }
+
+    .contact-wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     
 }
 
@@ -1335,6 +1341,15 @@ main {
     .swiper-button-prev,
     .swiper-button-next {
         display: none;
+    }
+
+    .second-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-row input {
+        width: 100%;
     }
 }
 
@@ -1381,5 +1396,9 @@ main {
 
     .contact-card h2 {
         font-size: 35px;
+    }
+
+    .contact-right p span {
+        display: inline;
     }
 }
