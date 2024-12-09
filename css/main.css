@@ -701,12 +701,12 @@ main {
     background: var(--bg-transparent-color);
     visibility: hidden;
     opacity: 0;
-    transition: .3s linear;
 }
 
 .service-modal.active {
     visibility: visible;
     opacity: 1;
+    transition: .3s linear;
 }
 
 .service-modal-body {
@@ -832,13 +832,14 @@ main {
     backdrop-filter: blur(20px);
     visibility: hidden;
     opacity: 0;
-    transition: .3s linear;
+    
 }
 
 .portfolio-modal.active {
     visibility: visible;
     opacity: 1;
     z-index: 11;
+    transition: .3s linear;
 }
 
 .portfolio-modal.active .portfolio-modal-body {
@@ -890,6 +891,7 @@ main {
 .get-in-touch .contact-card {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     position: relative;
     width: 90%;
     padding: 50px;
@@ -1137,8 +1139,9 @@ main {
     justify-content: space-between;
 }
 
-.about-group {
-}
+/* .hr {
+    border: 1px solid var(--liner-color);
+} */
 
 .about-group h2 {
     font-size: 35px;
@@ -1198,7 +1201,63 @@ main {
 
 /* Media Query max-width 980px */
 
+@media (max-width: 1070px) {
+
+    .media-icons {
+        order: 3;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .home-img {
+        order: 1;
+    }
+
+    .home-img img {
+        margin: 0 auto;
+    }
+
+    .home-info {
+        order: 2;
+    }
+
+    .home-info h1 {
+        font-size: 45px;
+    }
+
+    .home__wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .professional-list {
+        flex-wrap: wrap;
+    }
+
+}
+
 @media (max-width: 980px) {
+
+    .nav-menu-btn {
+        display: block;
+        position: relative;
+        z-index: 5;
+        background: url(../img/burger.svg) no-repeat center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: .3s linear;
+    }
+
+    .nav-menu-btn.close {
+        background: url(../img/close.svg) no-repeat center;
+    }
+
     .nav {
         position: fixed;
         width: 100%;
@@ -1207,11 +1266,18 @@ main {
         left: 0;
         align-items: center;
         background: var(--bg-transparent-color-01);
-        visibility: visible;
-        opacity: 1;
-        z-index: 11;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
         transition: .3s linear;
     }
+
+    .nav.active {
+        z-index: 3;
+        opacity: 1;
+        visibility: visible;
+    }
+
     .nav-menu {
         position: relative;
         flex-direction: column;
@@ -1224,7 +1290,115 @@ main {
         transform: translateY(-50%);
         transition: .3s linear;
     }
+
+    .nav-menu.active {
+        transform: translateY(0%);
+    }
+
     .nav-menu li {
         text-align: center;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-group {
+        text-align: center;
+    }
+
+    .get-in-touch .contact-card {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .client-swiper .swiper-slide {
+        flex-direction: column;
+    }
+
+    .contact-wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .contact-card h2 {
+        font-size: 40px;
+    }
+
+    .contact-card h3 {
+        font-size: 28px;
+    }
+
+    .contact-card h4 {
+        font-size: 18px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .second-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-row input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .inner-title {
+        font-size: 50px;
+    }
+
+    .about-group {
+        text-align: left;
+    }
+
+    .info-group,
+    .follow-group {
+        align-items: flex-start;
+    }
+
+    .info-group ul,
+    .follow-group ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-group a {
+        padding: 10px 0;
+    }
+
+    .education,
+    .work-exp .expirience-card {
+        min-width: 295px;
+        width: 32%;
+    }
+
+    .service-modal-body,
+    .portfolio-modal-body {
+        padding: 40px 15px 15px;
+    }
+
+    .service-modal-body h3,
+    .portfolio-modal-body h3 {
+        font-size: 25px;
+    }
+
+    .contact-card h2 {
+        font-size: 35px;
+    }
+
+    .contact-right p span {
+        display: inline;
     }
 }

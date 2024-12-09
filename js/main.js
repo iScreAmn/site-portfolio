@@ -44,7 +44,60 @@ scrollToTop.addEventListener("click", function() {
   document.documentElement.scrollTop = 0
 })
 
+// Scroll Reveal Enable
+// ScrollReveal().reveal( {scale: 1.5, delay: 200});
 
+const revealConfiguration = [
+  {selector: '.inner-title, .inner-subtitle', config: {opacity: 0, delay: 200}},
+  {selector: '.home-info h1, .about-img, .contact-card .title', config: {delay: 100, origin: 'left'}},
+  {selector: '.home-img, .description, .inner-info-link', config: {delay: 100, origin: 'right'}},
+  {selector: '.skills-description, .work-exp-title, .services-description, .contact-right p, .contact-left h2', config: {delay: 600, origin: 'top'}},
+  {selector: '.media-icons a, .list-item, .inner-info-link', config: {delay: 100, origin: 'bottom', interval: 200}},
+  {selector: '.education', config: {origin: 'top',delay: 100, interval: 300}},
+  {selector: '.work-exp .experience-card, .services-container, .portfolio-img-card, .contact-list li, .first-row, .second-row, .third-row', config: {origin: 'top',delay: 100, interval: 300}},
+  {selector: '.home-info h3, .home-info p, .home-info-link', config: {delay: 100, origin: 'left'}},
+]
+
+function initializeScrollReveal() {
+  window.sr = ScrollReveal({
+    reset: false,
+    distance: "60px",
+    duration: 2500,
+    delay: 100
+  })
+  revealConfiguration.forEach(({selector, config}) => {
+    sr.reveal(selector, config)
+  })
+}
+
+initializeScrollReveal()
+
+// Scroll Reveal Disable
+
+function disableScrollReveal() {
+  sr.clean() // Очистка всех элементов от анимации
+  document.documentElement.style.overflowY = "hidden"
+  document.body.style.overflowY = "hidden"
+
+  revealConfiguration.forEach(({selector}) => {
+    document.querySelectorAll(selector).forEach(el => {
+      el.style.transform = ""
+      el.style.opacity = ""
+      el.style.transition = ""
+      el.style.visibility = ""
+    })
+  })
+  console.log("function off")
+}
+
+// Функция повторной инициализации ScrollReveal
+
+function enableScrollReveal() {
+  document.documentElement.style.overflowY = ""
+  document.body.style.overflowY = ""
+  initializeScrollReveal()
+  console.log("function work")
+}
 
 // Services section - Modal
 
@@ -54,6 +107,7 @@ const modalCloseBtn = document.querySelectorAll(".modal-close-btn")
 
 const modal = function(modalClick) {
   serviceModal[modalClick].classList.add("active")
+  disableScrollReveal()
 }
 
 learnMoreBtn.forEach((button, i) => {
@@ -67,8 +121,10 @@ modalCloseBtn.forEach(button => {
     serviceModal.forEach(modal => {
       modal.classList.remove("active")
     })
+    enableScrollReveal()
   })
 })
+
 
 // Portfolio section - Modal
 
@@ -78,6 +134,7 @@ const portfolioCloseBtn = document.querySelectorAll(".portfolio-close-btn")
 
 const portfolioModal = function(modalClick) {
   portfolioModals[modalClick].classList.add("active")
+  disableScrollReveal()
 }
 
 imgCard.forEach((button, i) => {
@@ -91,6 +148,7 @@ portfolioCloseBtn.forEach(button => {
     portfolioModals.forEach(modalView => {
       modalView.classList.remove("active")
     })
+    enableScrollReveal()
   })
 })
 
@@ -109,3 +167,25 @@ const swiper = new Swiper(".client-swiper", {
     prevEl: ".swiper-button-prev"
   },
 });
+
+// Responsive navigation menu toggle
+
+const navBtn = document.querySelector(".nav-menu-btn")
+const navBar = document.querySelector(".nav")
+const navMenu = document.querySelector(".nav-menu")
+const navLinks = document.querySelectorAll(".nav-link")
+
+navBtn.addEventListener("click", function() {
+  navBtn.classList.toggle("close") 
+  navBar.classList.toggle("active")
+  navMenu.classList.toggle("active")
+})
+
+navLinks.forEach(function(link) {
+  link.addEventListener("click", function() {
+    navBtn.classList.remove("close")
+    navBar.classList.remove("active")
+    navMenu.classList.remove("active")
+  })
+})
+
