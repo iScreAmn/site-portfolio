@@ -49,13 +49,13 @@ scrollToTop.addEventListener("click", function() {
 
 const revealConfiguration = [
   {selector: '.inner-title, .inner-subtitle', config: {opacity: 0, delay: 200}},
-  {selector: '.home-info h1, .about-img, .contact-card .title', config: {delay: 500, origin: 'left'}},
-  {selector: '.home-img, .description, .inner-info-link', config: {delay: 600, origin: 'right'}},
-  {selector: '.skills-description, .work-exp-title, .services-description', config: {delay: 600, origin: 'top'}},
-  {selector: '.media-icons a, .list-item, .inner-info-link', config: {delay: 700, origin: 'bottom', interval: 200}},
-  {selector: '.education', config: {origin: 'top',delay: 600, interval: 300}},
-  {selector: '.work-exp .experience-card, .services-container, .portfolio-img-card', config: {origin: 'top',delay: 600, interval: 300}},
-  {selector: '.home-info h3, .home-info p, .home-info-link', config: {delay: 600, origin: 'left'}},
+  {selector: '.home-info h1, .about-img, .contact-card .title', config: {delay: 100, origin: 'left'}},
+  {selector: '.home-img, .description, .inner-info-link', config: {delay: 100, origin: 'right'}},
+  {selector: '.skills-description, .work-exp-title, .services-description, .contact-right p, .contact-left h2', config: {delay: 600, origin: 'top'}},
+  {selector: '.media-icons a, .list-item, .inner-info-link', config: {delay: 100, origin: 'bottom', interval: 200}},
+  {selector: '.education', config: {origin: 'top',delay: 100, interval: 300}},
+  {selector: '.work-exp .experience-card, .services-container, .portfolio-img-card, .contact-list li, .first-row, .second-row, .third-row', config: {origin: 'top',delay: 100, interval: 300}},
+  {selector: '.home-info h3, .home-info p, .home-info-link', config: {delay: 100, origin: 'left'}},
 ]
 
 function initializeScrollReveal() {
