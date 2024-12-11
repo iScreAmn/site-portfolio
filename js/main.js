@@ -87,7 +87,7 @@ function disableScrollReveal() {
       el.style.visibility = ""
     })
   })
-  console.log("function off")
+  // console.log("function off")
 }
 
 // Функция повторной инициализации ScrollReveal
@@ -96,7 +96,7 @@ function enableScrollReveal() {
   document.documentElement.style.overflowY = ""
   document.body.style.overflowY = ""
   initializeScrollReveal()
-  console.log("function work")
+  // console.log("function work")
 }
 
 
@@ -216,5 +216,5 @@ const savedIcon = localStorage.getItem("saved-icon")
 
 if(savedTheme) {
   document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme")
-  themeBtnclassList[savedIcon === "sun" ? "add" : "remove"]("sun")
+  themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun")
 }
