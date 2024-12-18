@@ -3,9 +3,14 @@
 
 :root {
     /*=======Main theme colors=======*/
-    --first-color: #0e2431;
-    --second-color: #6a59d1;
+    --first-color: #5e5d5d;
+    --second-color: #FFA500;
     --third-color: #777;
+
+    --test-color: #d87b29;
+    --old-second-color: #6a59d1;
+    --old-third-color: #777;
+    
 
     /*=======Hover colors=======*/
     --hover-color: #614fd0;
