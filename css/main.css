@@ -1418,6 +1418,10 @@ input::placeholder {
 
 /* CONTACT */
 
+.contact {
+    padding-bottom: 100px;
+}
+
 .contact-wrapper {
     display: flex;
     justify-content: space-between;
@@ -1461,9 +1465,6 @@ input::placeholder {
     color: var(--third-color);
 }
 
-
-.contact-list {}
-
 .contact-right {
     max-width: 536px;
     width: 100%;
@@ -1480,8 +1481,6 @@ input::placeholder {
     font-weight: 700;
     color: var(--first-color);
 }
-
-.contact-form {}
 
 .contact-form input,
 .contact-form textarea {
@@ -1507,8 +1506,6 @@ input::placeholder {
 .contact-form input:active {
     border: 1px solid #614fd0;
 }
-
-.first-row {}
 
 .first-row input {
     width: 100%;
@@ -1583,8 +1580,6 @@ input::placeholder {
     padding: 10px;
 }
 
-.hr {}
-
 .follow-group a {
     font-size: 24px;
     padding: 10px;
@@ -1656,8 +1651,6 @@ input::placeholder {
 }
 
 /* DIGITAL SECTION */
-
-.digital__title {}
 
 canvas {
     display: block;
